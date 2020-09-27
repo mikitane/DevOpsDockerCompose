@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  service1:
+    build: ./Service1
+    ports:
+      - "8001:3000"
+    networks:
+      - randomnet
+  service2:
+    image: service2:latest
+    build: ./Service2
+    networks:
+      - randomnet
+networks:
+  randomnet:
